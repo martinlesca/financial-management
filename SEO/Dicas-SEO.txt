@@ -1,0 +1,22 @@
+Dicas SEo:
+
+1) Heading Tags
+
+Ordem de importância para os mecanismos de busca: h1 < h2 < h3 < h4 < h5 < h6. 
+Insira suas principais palavras-chave nas headings tags e procure manter o número total de palavras em cada uma delas menor do que 7. 
+Utilize-as combinando a ordem lógica e de importância dos textos de acordo com a ordem numérica das tags. Exemplo: não utilize em um subtítulo uma heading tag maior do que a empregada num título de seção da página. 
+Não repita a mesma heading tag mais de uma vez na mesma página.
+
+2) Meta Tags with Master Pages in .Net
+
+<%@ Page Language="C#" MasterPageFile="~/PageTags.master" 
+    AutoEventWireup="true" CodeFile="home.aspx.cs" Inherits="home" 
+    Title="My home page title" %>
+
+protected void Page_Load(object sender, EventArgs e)
+    {
+            HtmlMeta tag = new HtmlMeta();
+            tag.Name = "description";
+            tag.Content = "My description for this page";
+            Header.Controls.Add(tag);
+    }

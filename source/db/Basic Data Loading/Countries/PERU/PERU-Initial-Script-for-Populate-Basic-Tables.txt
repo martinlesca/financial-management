@@ -1,0 +1,275 @@
+call spi_cos('SPANISH','PERU','SEARCH_ENGINE','Sitio de buscas',10,1,'NONE',null,null,null,null,'PF,PJ');
+call spi_cos('SPANISH','PERU','EMAIL_MARKETING','Anuncio por email',20,1,'NONE',null,null,null,null,'PF,PJ');
+call spi_cos('SPANISH','PERU','ACCORD','Convenio',23,1,'NONE',null,null,null,null,'PF,PJ');
+call spi_cos('SPANISH','PERU','NEWSPAPER','Periódico',30,1,'NONE',null,null,null,null,'PF,PJ');
+call spi_cos('SPANISH','PERU','MAGAZINE','Revista',40,1,'NONE',null,null,null,null,'PF,PJ');
+call spi_cos('SPANISH','PERU','CONSULTANT','Consultor',50,1,'COMMISSION',null,null,null,null,'PF,PJ');
+call spi_cos('SPANISH','PERU','FRIEND_OR_RELATIVE','Indicación de amigo o familiar',70,1,'ADDITIONAL_MONTH',null,null,1,1,'PF,PJ');
+call spi_cos('SPANISH','PERU','OTHER_WEBSITE','Indicación de otro sitio',80,1,'NONE',null,null,null,null,'PF,PJ');
+call spi_cos('SPANISH','PERU','EVENT','Seminario, conferencia o otro evento',90,1,'NONE',null,null,null,null,'PF,PJ');
+call spi_cos('SPANISH','PERU','OTHER','Otros',100,1,'NONE',null,null,null,null,'PF,PJ');
+
+
+call spi_pwy(0,0,'PERU','DEPOSITO_BANCARIO','Depósito bancario',1,1,'images/paymentOptions/pag_Deposito.gif',1,1,0,1,'DEPOSITO_BANCARIO',30,1,'237','0031','119704-5',1,0,'','');
+call spi_pwy(0,0,'PERU','PAGTO_INTERNET','PagSeguro UOL',0,1,'images/paymentOptions/pagSeguroUOL_todos.gif',1,1,1,0,'PAGSEGURO_UOL',0,14,'237','0031','119704-5',1,0,'','');
+
+
+/* populating bank account types by country */
+
+insert into bat (f1,f2,f3,f4) values('PERU','X','Caja',1);
+insert into bat (f1,f2,f3,f4) values('PERU','C','Corriente',5);
+insert into bat (f1,f2,f3,f4) values('PERU','P','Ahorros',10);
+
+call spi_ban(0,0,'PERU','CX','Mi Caja');
+
+
+insert into bls (f1,f2,f3,f4) values('PERU','F','ATIVO','Activo');
+insert into bls (f1,f2,f3,f4) values('PERU','F','PASSIVO','Pasivo');
+
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','F','ATIVO','ATIVO_CIRCULANTE','Activo Circulante',1);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','F','ATIVO','ATIVO_LONGO_PRAZO','Activo Realizable a Largo Plazo',2);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','F','ATIVO','ATIVO_PERMANENTE','Activo Fijo',3);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','F','PASSIVO','PASSIVO_CIRCULANTE','Pasivo Circulante',1);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','F','PASSIVO','PASSIVO_LONGO_PRAZO','Pasivo Exigible a Largo Plazo',2);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','F','PASSIVO','PATRIMONIO_LIQUIDO','Patrimonio Neto',3);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_CIRCULANTE','CAIXA_BANCOS','Saldo en caja y bancos',0,0,0,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_CIRCULANTE','SALARIOS_HONORARIOS','Sueldo y honorarios a recibir',0,1,0,0,3,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_CIRCULANTE','APLICACOES_FINANCEIRAS','Inversiones financieras',0,0,1,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_CIRCULANTE','EMPRESTIMOS_PARA_OUTROS','Préstamos para terceros',0,1,0,0,4,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS','Otros créditos',0,1,0,0,5,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_LONGO_PRAZO','APLICACOES_FINANCEIRAS_LP ','Inversiones financieras',0,0,1,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_LONGO_PRAZO','EMPRESTIMOS_PARA_OUTROS_LP','Préstamos para terceros',0,1,0,0,3,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_LONGO_PRAZO','ATIVO_LONGO_PRAZO_OUTROS','Otros créditos',0,1,0,0,5,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_PERMANENTE','VEICULOS','Vehículos',0,0,1,0,2,1,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_PERMANENTE','IMOVEIS','Inmuebles',0,0,0,1,3,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','ATIVO','ATIVO_PERMANENTE','ATIVO_PERMANENTE_OUTROS','Otros',0,0,0,0,5,0,1,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_CIRCULANTE','CARTAO_CREDITO','Tarjeta de crédito',1,0,0,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_CIRCULANTE','EMPRESTIMOS_FINANCIAMENTOS','Préstamos y financiaciones',1,0,0,0,3,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES','Proveedores',1,0,0,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_CIRCULANTE','IMPOSTOS_TAXAS','Impuestos y tasas',1,0,0,0,4,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS','Otras obligaciones',1,0,0,0,6,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_LONGO_PRAZO','EMPRESTIMOS_FINANCIAMENTOS_LP','Préstamos y financiaciones',1,0,0,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_LONGO_PRAZO','FORNECEDORES_LP','Proveedores',1,0,0,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_LONGO_PRAZO','IMPOSTOS_TAXAS_LP','Impuestos y tasas',1,0,0,0,3,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PASSIVO_LONGO_PRAZO','PASSIVO_LONGO_PRAZO_OUTROS','Otras obligaciones',1,0,0,0,4,0,0,0);
+
+--Patrimonio Líquido calculado automatica como sendo Ativo - Passivo
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','F','PASSIVO','PATRIMONIO_LIQUIDO','PATRIMONIO_LIQUIDO','Patrimonio Neto',0,0,0,0,1,0,0,0);
+
+
+
+insert into egb values ('SPANISH','F','Energia Eléctrica','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Agua','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Intereses/Multa por Atraso','PERU','PASSIVO','PASSIVO_CIRCULANTE','EMPRESTIMOS_FINANCIAMENTOS');
+insert into egb values ('SPANISH','F','Tarifas','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Salud','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Telecomunicaciones','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Educación','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Viajes','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Entretenimiento/recreación','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Vestuario','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Habitación','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Impuestos','PERU','PASSIVO','PASSIVO_CIRCULANTE','IMPOSTOS_TAXAS');
+insert into egb values ('SPANISH','F','Donaciones/Regalos','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','F','Otros','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','F','Servicios de Terceros','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Supermercado','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Alimentación','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Transportes','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Pago de Préstamos y Financiaciones','PERU','PASSIVO','PASSIVO_CIRCULANTE','EMPRESTIMOS_FINANCIAMENTOS');
+insert into egb values ('SPANISH','F','Empleados','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Estacionamento','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','F','Gasto de tarjeta de Crédito','PERU','PASSIVO','PASSIVO_CIRCULANTE','CARTAO_CREDITO');
+insert into egb values ('SPANISH','F','Máquinas y Equipos al contado','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+
+insert into rgb values ('SPANISH','F','Sueldo','PERU','ATIVO','ATIVO_CIRCULANTE','SALARIOS_HONORARIOS');
+insert into rgb values ('SPANISH','F','Servicios Ofrecidos','PERU','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS');
+insert into rgb values ('SPANISH','F','Venta de Productos','PERU','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS');
+insert into rgb values ('SPANISH','F','Préstamos de Terceros','PERU','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS');
+insert into rgb values ('SPANISH','F','Donaciones/Regalos','PERU','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS');
+insert into rgb values ('SPANISH','F','Otros','PERU','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS');
+insert into rgb values ('SPANISH','F','Intereses/Multa por Atraso','PERU','ATIVO','ATIVO_CIRCULANTE','EMPRESTIMOS_PARA_OUTROS');
+insert into rgb values ('SPANISH','F','Préstamos para Terceros','PERU','ATIVO','ATIVO_CIRCULANTE','EMPRESTIMOS_PARA_OUTROS');
+
+
+--PESSOA JURIDICA
+
+insert into bls (f1,f2,f3,f4) values('PERU','J','ATIVO','Activo');
+insert into bls (f1,f2,f3,f4) values('PERU','J','PASSIVO','Pasivo');
+
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','Activo Circulante',1);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_NAO_CIRCULANTE','Activo No Circulante',2);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_LONGO_PRAZO','Activo Realizable a Largo Plazo',3);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_PERMANENTE','Activo No Circulante',4);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','Pasivo Circulante',1);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_NAO_CIRCULANTE','Pasivo No Circulante',2);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','Pasivo Exigible a Largo Plazo',3);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','RESULTADO_EXERCICIOS_FUTUROS','Resultados de Ejercicios Futuros',4);
+insert into bss (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PATRIMONIO_LIQUIDO','Patrimonio Neto',5);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','CAIXA_BANCOS','Caja y bancos',0,0,0,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','APLICACOES_FINANCEIRAS','Inversiones financieras',0,0,1,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','CREDITOS','Créditos a recibir',0,1,0,0,3,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS','Otros créditos',0,1,0,0,4,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','ESTOQUES','Existencias',0,0,0,0,5,0,0,1);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','DESPESAS_ANTECIPADAS','Dispendios antecipados',0,0,0,0,6,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_LONGO_PRAZO','APLICACOES_FINANCEIRAS_LP','Inversiones financieras',0,0,1,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_LONGO_PRAZO','CREDITOS_LP','Créditos',0,1,0,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_LONGO_PRAZO','ATIVO_LONGO_PRAZO_OUTROS','Otros créditos',0,1,0,0,4,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_LONGO_PRAZO','DESPESAS_ANTECIPADAS_LP','Dispendios antecipados',0,0,0,0,5,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_PERMANENTE','INVESTIMENTOS','Inversiones',0,0,0,0,1,0,1,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_PERMANENTE','IMOBILIZADO','Inmovilizado',0,0,0,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','ATIVO','ATIVO_PERMANENTE','INTANGIVEL','Intangible',0,0,0,0,3,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES','Proveedores',1,0,0,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','EMPRESTIMOS_FINANCIAMENTOS','Préstamos y financiaciones',1,0,0,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','IMPOSTOS_TAXAS','Impuestos y tasas',1,0,0,0,3,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS','Otras obligaciones',1,0,0,0,5,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','FORNECEDORES_LP','Proveedores',1,0,0,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','EMPRESTIMOS_FINANCIAMENTOS_LP','Préstamos y financiaciones',1,0,0,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','IMPOSTOS_TAXAS_LP','Impuestos y tasas',1,0,0,0,3,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','PASSIVO_LONGO_PRAZO_OUTROS','Outras obrigações',1,0,0,0,5,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','RESULTADO_EXERCICIOS_FUTUROS','RESULTADO_EXERCICIOS_FUTUROS','Resultados de Ejercicios Futuros',0,0,0,0,1,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','RESULTADO_EXERCICIOS_FUTUROS','RECEITA_EXERCICIOS_FUTUROS','Ingreso de ejercícios futuros',0,0,0,0,2,0,0,0);
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','RESULTADO_EXERCICIOS_FUTUROS','CUSTO_EXERCICIOS_FUTUROS','Costo de ejercícios futuros',0,0,0,0,3,0,0,0);
+
+insert into bst (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14) values('PERU','J','PASSIVO','PATRIMONIO_LIQUIDO','PATRIMONIO_LIQUIDO','Patrimonio Neto',0,0,0,0,1,0,0,0);
+
+
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','CAIXA_BANCOS','Saldo en caja y en cuentas bancarias de liquidez inmediata');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','APLICACOES_FINANCEIRAS','Inversiones financieras de liquidez inmediata');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','CREDITOS','Derechos realizables hasta el ejercicio siguinte. Ejemplo: Duplicatas a recibir (-) Duplicatas descontadas (-) Provisión para deudores dudosos');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','ESTOQUES','Materias-primas, embalajes, productos acabados y en proceso de fabricación, mercancias, material de oficina (-) Provisión para ajuste a valor de mercado');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS','Otros créditos: Títulos a recibir, inversiones financieras, adiantamento a empleados, impuestos a recuperar, Dispendios antecipados (Premios de seguros, alquileres y intereses a apropriar)');
+
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_LONGO_PRAZO','APLICACOES_FINANCEIRAS_LP','Inversiones financieras con rescate probable después de 1 año');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_LONGO_PRAZO','CREDITOS_LP','Créditos a receber após o prazo de 1 ano: Duplicatas a recibir (-) Duplicatas descontadas (-) Provisión para deudores dudosos');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_LONGO_PRAZO','ATIVO_LONGO_PRAZO_OUTROS','Otros créditos a receber após 1 ano: Títulos a recibir, inversiones financieras, depósitos compulsorios, depósitos judiciales');
+
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_PERMANENTE','INVESTIMENTOS','Agios o desagios de inversiones, Inmuebles para alquiler, inmuebles para uso futuro, obras de arte, inversiones en incentivos fiscales, participaciones permanentes en otras sociedades (-) provisiones para pérdidas en la alienación de inversiones');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_PERMANENTE','IMOBILIZADO','Muebles y utensilios (-) depreciación acumulada, vehículos (-) depreciación acumulada, edifícios (-) depreciação acumulada, Marcas y patentes (-) amortización acumulada, mejoras en propriedad de terceros (-) amortización acumulada, derechos sobre recursos naturales (-) exaustión acumulada, terrenos');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','ATIVO','ATIVO_PERMANENTE','INTANGIVEL','Bienes incorporeos destinados a la manutención da compañía o ejercidos com esa finalidad, inclusive el fondo de comercio adquirido: derechos de exploración de servicios públicos mediante concesión, marcas y patentes, softwares y el fondo de comercio adquirido');
+
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES','Proveedores a pagar');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','EMPRESTIMOS_FINANCIAMENTOS','Parcelas de préstamos y financiaciones con vencimiento durante el ejercício social siguinte');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','IMPOSTOS_TAXAS','Tributos a pagar');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS','Cuentas a pagar, sueldos y encargos sociales, vacaciones a pagar, honorarios a pagar');
+
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','FORNECEDORES_LP','Proveedores a pagar después de 1 año');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','EMPRESTIMOS_FINANCIAMENTOS_LP','Préstamos y financiaciones a pagar después de 1 año');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','IMPOSTOS_TAXAS_LP','Tributos a pagar después de 1 año');
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PASSIVO_LONGO_PRAZO','PASSIVO_LONGO_PRAZO_OUTROS','Otras obligaciones, debentures a pagar, impuestos a pagar');
+
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','RESULTADO_EXERCICIOS_FUTUROS','RESULTADO_EXERCICIOS_FUTUROS','ingresos ya recibidos por la empresa, sobre los quales no recae la obligación de entregar bienes o servicios: ingresos de alquiler y venta de inmuebles (-) costos con alquiler y venta de inmuebles, ingresos de alquiler de equipos (-) costos de alquiler de equipos');
+
+insert into bse (f1,f2,f3,f4,f5,f6) values('PERU','J','PASSIVO','PATRIMONIO_LIQUIDO','PATRIMONIO_LIQUIDO','Capital social subscrito (-) capital a subscribir, reservas de capital, reservas de avaliación, reservas de lucros, lucros o pérdidas acumulados, acciones en tesoraria');
+
+
+insert into egb values ('SPANISH','J','Energia Eléctrica','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Agua','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Encargos financieros','PERU','PASSIVO','PASSIVO_CIRCULANTE','EMPRESTIMOS_FINANCIAMENTOS');
+insert into egb values ('SPANISH','J','Tarifas','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Telecomunicaciones','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Entreinamento','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Sueldos y encargos sociales fijos','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Instalaciones','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Impuestos','PERU','PASSIVO','PASSIVO_CIRCULANTE','IMPOSTOS_TAXAS');
+insert into egb values ('SPANISH','J','Donaciones','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Otros','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Servicios de terceros vinculados a ventas','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Compra de bienes durables','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Alimentación','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Transportes','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Pago de Préstamos y Financiaciones','PERU','PASSIVO','PASSIVO_CIRCULANTE','EMPRESTIMOS_FINANCIAMENTOS');
+insert into egb values ('SPANISH','J','Compra de materia prima','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Pró-Labore','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Comisiones sobre ventas','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Debentures','PERU','PASSIVO','PASSIVO_CIRCULANTE','EMPRESTIMOS_FINANCIAMENTOS');
+insert into egb values ('SPANISH','J','Leasing','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Otro costo fijo','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Otro costo variable','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Pago en atraso','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Servicios de terceros no vinculados a ventas','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Sueldos y encargos sociales variables','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Retirada','PERU','PASSIVO','PASSIVO_CIRCULANTE','PASSIVO_CIRCULANTE_OUTROS');
+insert into egb values ('SPANISH','J','Dispendios antecipados con premios de seguros','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Dispendios antecipados con alquileres','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Dispendios antecipados con intereses','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Dispendios antecipados con subscripciones','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Dispendios antecipados con vale-transporte','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Dispendios antecipados con cesta básica','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+insert into egb values ('SPANISH','J','Dispendios antecipados otros','PERU','PASSIVO','PASSIVO_CIRCULANTE','FORNECEDORES');
+
+insert into rgb values ('SPANISH','J','Servicios ofrecidos','PERU','ATIVO','ATIVO_CIRCULANTE','CREDITOS');
+insert into rgb values ('SPANISH','J','Venta de Productos','PERU','ATIVO','ATIVO_CIRCULANTE','CREDITOS');
+insert into rgb values ('SPANISH','J','Intereses y dividendos','PERU','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS');
+insert into rgb values ('SPANISH','J','Otros derechos','PERU','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS');
+insert into rgb values ('SPANISH','J','Inversión externa','PERU','ATIVO','ATIVO_CIRCULANTE','ATIVO_CIRCULANTE_OUTROS');
+
+
+/* populating investment types */
+
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Cuenta de Ahorros','APLFIN','SAVING',1,1,0,1,'Aplicação em conta poupança. Investimento financeiro, em banco, de baixo risco e baixo rendimento, geralmente garantido pelo governo até um determinado valor através do Fundo Garantidor de Crédito',null);
+
+
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Vehículo','VEICUL','VEHICLE',1,1,9,1,'Compra de vehículo automotor','D');
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Inmueble','REASTA','REAL_STATE',1,1,10,1,'Adquisición de edificio, casa, departamento, terreno o propiedad rural','D');
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Obras de arte','OBRART','WORKMANSHIP',1,1,11,1,'Aquisição de obras de arte',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Moneda estranjera','APLFIN','FOREIGN_MONEY',1,1,6,1,'Compra de valor en dolar, euro, etc.',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Acciones','APLFIN','STOCKS',1,1,7,1,'Inversiones a través de la compra de lotes de acciones de empresas',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Debentures','APLFIN','DEBENTURES',1,1,9,1,'Inversiones a través de la compra de debêntures',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Derivativo','APLFIN','DERIVATIVES',1,1,10,1,'Inversiones en derivativos',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Oro','APLFIN','GOLD',1,1,12,1,'Adquisición de contrato de oro custodiado por institución reconocida',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Existencias','ESTPRD','GOODS_STOCK',0,1,13,1,'Existencias de productos para fabricación o para venta',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Participación en otras empresas','PRTCOM','COMPANY_SHARE',0,1,14,1,'Participación en valor en la sociedad de otras empresas',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Máquinas y equipos','EQUIPT','EQUIPMENT',0,1,13,1,'Máquinas y equipos de uso de la empresa','D');
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Muebles y utensilios','FURNIT','FURNITURE',0,1,14,1,'Muebles y utensilios de uso de la empresa','D');
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Computadoras y Periféricos','EQUIPT','COMPUTER',0,1,16,1,'Computadoras y periféricos de uso de la empresa','D');
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Marcas y patentes','INTANGIBLE','PATENT',0,1,17,1,'Marcas y patentes de propiedad de la empresa','A');
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Mejoramientos en propiedades de terceros','IMPROVEMENT','IMPROVEMENT',0,1,18,1,'Mejoramientos y reformas en propiedades de terceros','A');
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Software','INTANGIBLE','SOFTWARE',0,1,21,1,'Solamente software que no es parte integrante de algun hardware específico','A');
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Agio de inversiones','INTANGIBLE','AGIO',0,1,22,1,'Agio pago por expectativa de rentabilidad futura (goodwill)','A');
+
+insert into rsa (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Inmueble','Terreno','LAND',1,1,0,'');
+insert into rsa (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Inmueble','Edificio/Casa/Departamento','BUILDING',2,1,1,'');
+
+
+/* a pesquisar correspondente ********************/
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Título do Tesouro Direto','APLFIN','PUBLIC_BOND',1,1,5,1,'Investimento em Títulos públicos federais de renda fixa, emitido pelo Tesouro Nacional para financiamento do Déficit Orçamentário Geral da União e da Dívida Pública Federal',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','CDB','APLFIN','CERTIFICATE_OF_DEPOSIT',1,1,1,1,'Aplicação em CDB. Certificado de Depósito Bancário são títulos nominativos emitidos pelos bancos e vendidos ao público como forma de captação de recursos.',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','Fundo de investimento','APLFIN','INVESTMENT_FUND',1,1,8,1,'Aplicações em previdência e fundos de investimento',null);
+insert into tpi (f1,f2,f3,f4,f5,f6,f7,f8,f9,f10) values ('PERU','FGTS','APLFIN','FGTS',1,0,4,1,'Saldo do seu Fundo de Garantia do Tempo de Serviço',null);
+
+insert into drv (f1,f2,f3,f4,f5,f6,f7) values ('PERU','Derivativo','Contrato de Opciones','OPTIONS_CONTRACT',1,1,'Investimento através da aquisição de direitos de compra ou venda de ações, índices de ações, moedas, contratos futuros ou títulos, com preços de exercício pré-estabelecidos');
+insert into drv (f1,f2,f3,f4,f5,f6,f7) values ('PERU','Derivativo','Contrato a Termo','FUTURES_CONTRACT',2,1,'Investimento através de acordos de compra ou venda em determinada data futura por preços previamente estabelecidos, cuja liquidação financeira ou entrega física do ativo acontece, geralmente, no vencimento');
+insert into drv (f1,f2,f3,f4,f5,f6,f7) values ('PERU','Derivativo','SWAP','SWAP',3,1,'Investimento através de contratos de SWAP para protecção contra a variação nos preços de moedas, taxas de juro ou preços de commodities');
+
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo curto prazo','Curto prazo','SHORT_TERM',1,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo curto prazo','Aplicação automática','SHORT_TERM',2,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo referenciado','Referenciado DI','REFERENCE_FUND',5,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo referenciado','Referenciado outros','REFERENCE_FUND',6,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo renda fixa','Renda fixa','FIXED_INCOME_FUND',7,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo multimercado','Multimercado','MULTIMARKET_FUND',8,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo de ações','Ações','STOCKS_FUND',9,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo cambial','Cambial dólar sem alavancagem','EXCHANGE_FUND',10,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo cambial','Cambial euro sem alavancagem','EXCHANGE_FUND',11,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo de Previdência','PGBL(Plano Gerador de Benefício Livre)','PRIVATE_SECURITY',12,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo de Previdência','VGBL(Vida Gerador de Benefício Livre)','PRIVATE_SECURITY',13,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo de Previdência','Previdência social (INSS)','PUBLIC_SECURITY',14,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo de investimento imobiliário','Fundo de investimento imobiliário','REAL_STATE_FUND',15,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo de Investimento em Direitos Creditórios','FIDC','RECEIVABLE_FUND',16,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo Off Shore','Fundo FIEX','OFFSHORE_FUND',17,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo de Índice','Fundo de Índice','EXCHANGE_TRADED_FUND',18,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Fundo de Investimento em Participações','FIP','SHARE_INVESTMENT_FUND',19,1,'');
+insert into inf (f1,f2,f3,f4,f5,f6,f7,f8) values ('PERU','Fundo de investimento','Outro tipo de fundo','Outro tipo de fundo','OTHER_INVESTMENT_FUND',30,1,'');
+
+/* end - a pesquisar correspondente ********************/

@@ -1,0 +1,16 @@
+F:\Private_myDoc\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\ResolveAssemblyReference.cache
+F:\Private_myDoc\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto_net.Form1.resources
+F:\Private_myDoc\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto_net.Properties.Resources.resources
+F:\Private_myDoc\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto-net.csproj.GenerateResource.Cache
+F:\Private_myDoc\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\bin\Debug\crypto-net.exe
+F:\Private_myDoc\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\bin\Debug\crypto-net.pdb
+F:\Private_myDoc\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto-net.exe
+F:\Private_myDoc\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto-net.pdb
+C:\Documents and Settings\Martin\Meus documentos\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto-net.exe
+C:\Documents and Settings\Martin\Meus documentos\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto-net.pdb
+C:\Documents and Settings\Martin\Meus documentos\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\bin\Debug\crypto-net.exe
+C:\Documents and Settings\Martin\Meus documentos\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\bin\Debug\crypto-net.pdb
+C:\Documents and Settings\Martin\Meus documentos\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Martin\Meus documentos\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto_net.Form1.resources
+C:\Documents and Settings\Martin\Meus documentos\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto_net.Properties.Resources.resources
+C:\Documents and Settings\Martin\Meus documentos\PF-n\ControleInvestimentos\source\Utilities\encrypt\src\crypto-net\crypto-net\obj\Debug\crypto-net.csproj.GenerateResource.Cache

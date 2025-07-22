@@ -1,0 +1,13 @@
+Titulo: MoneyNob
+Dominio: www.moneynob.com
+Palavras-chave: financeiro,analise,fluxo de caixa,financeira,finanças,controle, pagamento
+Descrição:
+Controle e planejamento financeiro. Foque nos seus negócios e deixe o MoneyNob lhe ajudar na sua gestão financeira.
+
+<head>
+<meta name="title" content="MoneyNob" />
+<meta name="url" content="www.moneynob.com" />
+<meta name="description" content="Controle e planejamento financeiro. Foque nos seus negócios e deixe o MoneyNob lhe ajudar na sua gestão financeira " />
+<meta name="keywords" content="financeiro,analise,fluxo de caixa,financeira,finanças,controle, pagamento" />
+<meta name="charset" content="ISO-8859-1" />
+</head>

@@ -1,0 +1,21 @@
+7 Dicas de SEO para otimizar seu site no Google
+
+
+1. Revise seu Conteúdo e veja se realmente está agregando valor ao usuário ou se está apenas com palavras-chave jogadas aleatóriamente 
+2. Obtenha links de sites relevantes e com boa reputação. Como? Seguindo o item 1 já é um excelente começo. 
+3. Use a meta tag description corretamente. Ao invés e por todas as palavras que você quer ganhar posições, ponha um breve resumo do que contém na página. Essa tag é utlizada para montar o “snipet” na página de busca, se ela estiver ausente o robô pegará um texto aleatório. 
+4. Meta tag keywords já não tem muita importância para o Google, mas outros sites ainda utilizam, então também vale usar, mas com moderação. 
+5. Avise ao mundo que você existe ou adicionou conteúdo novo no seu site, para isso você pode usar pings ou mesmo um sitemap em xml e enviar ao Google, Bing, Yahoo etc.. 
+6. Faça uma revisão do seu código Front-End e Back-End, veja o que pode ser otimizado, prefira CSS e Tableless pois os arquivos ficam menores, tem menos linhas e os robôs agradecem. Consequentemente, seu site ficará mais rápido e causará uma boa impressão. Se você utiliza consultas a bancos repetitivas, faça um cache, faça tudo que for possível para tornar o site mais rápido. 
+7. Por fim, matenha-se atualizado sobre o assunto que você abrange no seu site para sempre ter algo novo relacionado ao tema e por consequência ser encontrado pela palavra-chave, foque em um assunto e vá de cabeça. Não há resultados sem esforço, no pain no gain. 
+Seguindo estes passos você já notará algum aumento e visitas.
+O resultado não será imediato. Se você tem pressa e quer resultados rápidos, digo resultados rápidos como aparecer na primeira página de busca, o Google oferece uma opção, AdWords, pague e apareça.
+
+Eu diria que um trabalho de SEO bem feito já pode começar a ter resultados dentro de 3 a 6 meses.
+
+Promessa de aparecer na 1ª página da busca orgânica (non-paid) é tão verdadeira como uma nota e R$ 3,00. 
+
+O segredo é que não há segredo e sim trabalho duro e pesquisa constante.
+
+Fica a dica  
+

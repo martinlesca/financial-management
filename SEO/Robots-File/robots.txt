@@ -1,0 +1,26 @@
+User-Agent: *
+Allow: /
+
+Disallow: login.aspx
+Disallow: checkAlert.aspx
+Disallow: orderClosing.aspx
+Disallow: shopCart.aspx
+Disallow: payment.aspx
+Disallow: Web.config
+Disallow: retornoPagSeguro.aspx
+Disallow: callJTask.aspx
+Disallow: indicacao.aspx
+Disallow: sendOrderData.aspx
+Disallow: prcEmailMkt.aspx
+Disallow: redireciona.aspx
+Disallow: mnpbchart.ascx
+Disallow: mnpbchart.aspx
+Disallow: captcha.ascx
+Disallow: Global.asax
+Disallow: /App_GlobalResources
+Disallow: /App_Themes
+Disallow: /bin
+Disallow: /css
+Disallow: /download
+Disallow: /management
+Disallow: /userArea
