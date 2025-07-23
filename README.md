@@ -1,4 +1,4 @@
-# gestao-financeira
+# financial-management
 Projeto para gestão financeira de pequenas empresas e pessoa física na modalidade SAAS (disponibilizado online 2009-2011).   
 Desenvolvido em C# e MySQL
 
