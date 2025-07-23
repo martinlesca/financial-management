@@ -31,6 +31,7 @@ Desenvolvido em C# e MySQL
 
 <img width="820" height="559" alt="Tela04" src="https://github.com/user-attachments/assets/fa8f63e6-1c44-49f0-95e0-5f15833362ec" />
 
+<img width="876" height="589" alt="Tela10" src="https://github.com/user-attachments/assets/752e93ea-1e41-4f81-8bbe-cb6390fcec26" />
 
 
 #
